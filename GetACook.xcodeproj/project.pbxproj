@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		AB1CEC5C1ECDA1890090E3E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1CEC5B1ECDA1890090E3E5 /* AppDelegate.swift */; };
-		AB1CEC5E1ECDA1890090E3E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1CEC5D1ECDA1890090E3E5 /* ViewController.swift */; };
+		AB1CEC5E1ECDA1890090E3E5 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1CEC5D1ECDA1890090E3E5 /* ItemViewController.swift */; };
 		AB1CEC611ECDA1890090E3E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB1CEC5F1ECDA1890090E3E5 /* Main.storyboard */; };
 		AB1CEC631ECDA1890090E3E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB1CEC621ECDA1890090E3E5 /* Assets.xcassets */; };
 		AB1CEC661ECDA1890090E3E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB1CEC641ECDA1890090E3E5 /* LaunchScreen.storyboard */; };
 		AB1CEC711ECDA1890090E3E5 /* GetACookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1CEC701ECDA1890090E3E5 /* GetACookTests.swift */; };
+		AB1D4F2F1EE318140062A818 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1D4F2E1EE318140062A818 /* RatingControl.swift */; };
+		AB1D4F311EE3235C0062A818 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1D4F301EE3235C0062A818 /* Item.swift */; };
+		AB1D4F331EE330770062A818 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1D4F321EE330770062A818 /* ItemTableViewCell.swift */; };
+		AB1D4F351EE368800062A818 /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1D4F341EE368800062A818 /* ItemTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +32,7 @@
 /* Begin PBXFileReference section */
 		AB1CEC581ECDA1890090E3E5 /* GetACook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetACook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB1CEC5B1ECDA1890090E3E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AB1CEC5D1ECDA1890090E3E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB1CEC5D1ECDA1890090E3E5 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		AB1CEC601ECDA1890090E3E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB1CEC621ECDA1890090E3E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB1CEC651ECDA1890090E3E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +40,10 @@
 		AB1CEC6C1ECDA1890090E3E5 /* GetACookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetACookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB1CEC701ECDA1890090E3E5 /* GetACookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetACookTests.swift; sourceTree = "<group>"; };
 		AB1CEC721ECDA1890090E3E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB1D4F2E1EE318140062A818 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		AB1D4F301EE3235C0062A818 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		AB1D4F321EE330770062A818 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		AB1D4F341EE368800062A818 /* ItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +86,12 @@
 			isa = PBXGroup;
 			children = (
 				AB1CEC5B1ECDA1890090E3E5 /* AppDelegate.swift */,
-				AB1CEC5D1ECDA1890090E3E5 /* ViewController.swift */,
+				AB1CEC5D1ECDA1890090E3E5 /* ItemViewController.swift */,
+				AB1D4F2E1EE318140062A818 /* RatingControl.swift */,
 				AB1CEC5F1ECDA1890090E3E5 /* Main.storyboard */,
+				AB1D4F341EE368800062A818 /* ItemTableViewController.swift */,
+				AB1D4F321EE330770062A818 /* ItemTableViewCell.swift */,
+				AB1D4F301EE3235C0062A818 /* Item.swift */,
 				AB1CEC621ECDA1890090E3E5 /* Assets.xcassets */,
 				AB1CEC641ECDA1890090E3E5 /* LaunchScreen.storyboard */,
 				AB1CEC671ECDA1890090E3E5 /* Info.plist */,
@@ -199,7 +211,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB1CEC5E1ECDA1890090E3E5 /* ViewController.swift in Sources */,
+				AB1D4F311EE3235C0062A818 /* Item.swift in Sources */,
+				AB1CEC5E1ECDA1890090E3E5 /* ItemViewController.swift in Sources */,
+				AB1D4F331EE330770062A818 /* ItemTableViewCell.swift in Sources */,
+				AB1D4F2F1EE318140062A818 /* RatingControl.swift in Sources */,
+				AB1D4F351EE368800062A818 /* ItemTableViewController.swift in Sources */,
 				AB1CEC5C1ECDA1890090E3E5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +426,7 @@
 				AB1CEC771ECDA1890090E3E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB1CEC781ECDA1890090E3E5 /* Build configuration list for PBXNativeTarget "GetACookTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +435,7 @@
 				AB1CEC7A1ECDA1890090E3E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

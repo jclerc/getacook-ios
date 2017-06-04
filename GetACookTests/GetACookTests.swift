@@ -9,28 +9,33 @@
 import XCTest
 @testable import GetACook
 
+//MARK: Item Class Tests
 class GetACookTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    // Confirm that the Item initializer returns a Item object when passed valid parameters.
+    func testItemInitializationSucceeds() {
+        // Zero rating
+        let zeroRatingItem = Item.init(name: "Zero", photo: nil, rating: 0)
+        XCTAssertNotNil(zeroRatingItem)
+        
+        // Highest positive rating
+        let positiveRatingItem = Item.init(name: "Positive", photo: nil, rating: 5)
+        XCTAssertNotNil(positiveRatingItem)
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
+    // Confirm that the Item initialier returns nil when passed a negative rating or an empty name.
+    func testItemInitializationFails() {
+        // Negative rating
+        let negativeRatingItem = Item.init(name: "Negative", photo: nil, rating: -1)
+        XCTAssertNil(negativeRatingItem)
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        // Rating exceeds maximum
+        let largeRatingItem = Item.init(name: "Large", photo: nil, rating: 6)
+        XCTAssertNil(largeRatingItem)
+        
+        // Empty String
+        let emptyStringItem = Item.init(name: "", photo: nil, rating: 0)
+        XCTAssertNil(emptyStringItem)
+   
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
