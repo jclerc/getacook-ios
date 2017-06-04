@@ -20,8 +20,12 @@ class ItemTableViewController: UITableViewController {
         // Use the edit button item provided by the table view controller.
         navigationItem.leftBarButtonItem = editButtonItem
         
-        // Load sample data
-        loadSampleItems()
+        // Load data
+        if let items = loadItems() {
+            self.items += items
+        } else {
+            loadSampleItems()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,6 +71,9 @@ class ItemTableViewController: UITableViewController {
             // Delete the row from the data source
             items.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            // Save items
+            saveItems()
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
@@ -132,6 +139,9 @@ class ItemTableViewController: UITableViewController {
                 items.append(item)
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
+            
+            // Save items
+            saveItems()
         }
     }
 
@@ -154,5 +164,18 @@ class ItemTableViewController: UITableViewController {
         }
         
         items += [item1, item2, item3]
+    }
+    
+    private func saveItems() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(items, toFile: Item.ArchiveURL.path)
+        if isSuccessfulSave {
+            os_log("Items successfully saved.", log: OSLog.default, type: .debug)
+        } else {
+            os_log("Failed to save items...", log: OSLog.default, type: .error)
+        }
+    }
+    
+    private func loadItems() -> [Item]? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Item.ArchiveURL.path) as? [Item]
     }
 }
