@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97595F17A82FD2F4EB009EA4 /* Pods_GetACook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9270181361DCEDA7D91549A /* Pods_GetACook.framework */; };
 		AB1CEC5C1ECDA1890090E3E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1CEC5B1ECDA1890090E3E5 /* AppDelegate.swift */; };
-		AB1CEC5E1ECDA1890090E3E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1CEC5D1ECDA1890090E3E5 /* ViewController.swift */; };
+		AB1CEC5E1ECDA1890090E3E5 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1CEC5D1ECDA1890090E3E5 /* HomeController.swift */; };
 		AB1CEC611ECDA1890090E3E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB1CEC5F1ECDA1890090E3E5 /* Main.storyboard */; };
 		AB1CEC631ECDA1890090E3E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB1CEC621ECDA1890090E3E5 /* Assets.xcassets */; };
 		AB1CEC661ECDA1890090E3E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB1CEC641ECDA1890090E3E5 /* LaunchScreen.storyboard */; };
 		AB1CEC711ECDA1890090E3E5 /* GetACookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1CEC701ECDA1890090E3E5 /* GetACookTests.swift */; };
+		AB20AD061EE60C5500BA9F39 /* OrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB20AD051EE60C5500BA9F39 /* OrderController.swift */; };
+		ABB72E7D1EE5FFAF0047AD4B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABB72E7C1EE5FFAF0047AD4B /* GoogleService-Info.plist */; };
+		ABB72E7E1EE5FFAF0047AD4B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABB72E7C1EE5FFAF0047AD4B /* GoogleService-Info.plist */; };
+		ABBB9CE21EE4859800CE1629 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBB9CE11EE4859800CE1629 /* RegisterController.swift */; };
+		ABBB9CE41EE485A100CE1629 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBB9CE31EE485A100CE1629 /* LoginController.swift */; };
+		C26ACAE8EB69C02EFBE25016 /* Pods_GetACookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB66AE0E4C66014F2F88DC7 /* Pods_GetACookTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +33,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		630D68760ECD6581D8485E9C /* Pods-GetACookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetACookTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetACookTests/Pods-GetACookTests.release.xcconfig"; sourceTree = "<group>"; };
+		9BB66AE0E4C66014F2F88DC7 /* Pods_GetACookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetACookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7F7DEF53A93DB6436A76B19 /* Pods-GetACook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetACook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GetACook/Pods-GetACook.debug.xcconfig"; sourceTree = "<group>"; };
 		AB1CEC581ECDA1890090E3E5 /* GetACook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetACook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB1CEC5B1ECDA1890090E3E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AB1CEC5D1ECDA1890090E3E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB1CEC5D1ECDA1890090E3E5 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		AB1CEC601ECDA1890090E3E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB1CEC621ECDA1890090E3E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB1CEC651ECDA1890090E3E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +46,13 @@
 		AB1CEC6C1ECDA1890090E3E5 /* GetACookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetACookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB1CEC701ECDA1890090E3E5 /* GetACookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetACookTests.swift; sourceTree = "<group>"; };
 		AB1CEC721ECDA1890090E3E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB20AD051EE60C5500BA9F39 /* OrderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderController.swift; sourceTree = "<group>"; };
+		ABB72E7C1EE5FFAF0047AD4B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ABBB9CE11EE4859800CE1629 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		ABBB9CE31EE485A100CE1629 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		D9270181361DCEDA7D91549A /* Pods_GetACook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetACook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFE4445067604FF655D93A80 /* Pods-GetACookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetACookTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GetACookTests/Pods-GetACookTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F601724B497A24D5F6E59034 /* Pods-GetACook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetACook.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetACook/Pods-GetACook.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97595F17A82FD2F4EB009EA4 /* Pods_GetACook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +68,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C26ACAE8EB69C02EFBE25016 /* Pods_GetACookTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		97D750A3E211A6D4FA50E16F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A7F7DEF53A93DB6436A76B19 /* Pods-GetACook.debug.xcconfig */,
+				F601724B497A24D5F6E59034 /* Pods-GetACook.release.xcconfig */,
+				DFE4445067604FF655D93A80 /* Pods-GetACookTests.debug.xcconfig */,
+				630D68760ECD6581D8485E9C /* Pods-GetACookTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AB1CEC4F1ECDA1890090E3E5 = {
 			isa = PBXGroup;
 			children = (
 				AB1CEC5A1ECDA1890090E3E5 /* GetACook */,
 				AB1CEC6F1ECDA1890090E3E5 /* GetACookTests */,
 				AB1CEC591ECDA1890090E3E5 /* Products */,
+				97D750A3E211A6D4FA50E16F /* Pods */,
+				AF6E2903B38016B3F003D4A7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,11 +110,15 @@
 			isa = PBXGroup;
 			children = (
 				AB1CEC5B1ECDA1890090E3E5 /* AppDelegate.swift */,
-				AB1CEC5D1ECDA1890090E3E5 /* ViewController.swift */,
+				AB1CEC5D1ECDA1890090E3E5 /* HomeController.swift */,
+				ABBB9CE11EE4859800CE1629 /* RegisterController.swift */,
+				ABBB9CE31EE485A100CE1629 /* LoginController.swift */,
 				AB1CEC5F1ECDA1890090E3E5 /* Main.storyboard */,
+				AB20AD051EE60C5500BA9F39 /* OrderController.swift */,
 				AB1CEC621ECDA1890090E3E5 /* Assets.xcassets */,
 				AB1CEC641ECDA1890090E3E5 /* LaunchScreen.storyboard */,
 				AB1CEC671ECDA1890090E3E5 /* Info.plist */,
+				ABB72E7C1EE5FFAF0047AD4B /* GoogleService-Info.plist */,
 			);
 			path = GetACook;
 			sourceTree = "<group>";
@@ -96,6 +132,15 @@
 			path = GetACookTests;
 			sourceTree = "<group>";
 		};
+		AF6E2903B38016B3F003D4A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9270181361DCEDA7D91549A /* Pods_GetACook.framework */,
+				9BB66AE0E4C66014F2F88DC7 /* Pods_GetACookTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +148,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AB1CEC751ECDA1890090E3E5 /* Build configuration list for PBXNativeTarget "GetACook" */;
 			buildPhases = (
+				0CBA60C005ECA064E4A29069 /* [CP] Check Pods Manifest.lock */,
 				AB1CEC541ECDA1890090E3E5 /* Sources */,
 				AB1CEC551ECDA1890090E3E5 /* Frameworks */,
 				AB1CEC561ECDA1890090E3E5 /* Resources */,
+				AB535A8368DC3DF19DC86B16 /* [CP] Embed Pods Frameworks */,
+				78B125AEA53A3911A07BE489 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +168,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AB1CEC781ECDA1890090E3E5 /* Build configuration list for PBXNativeTarget "GetACookTests" */;
 			buildPhases = (
+				28A43842914E31A70745A362 /* [CP] Check Pods Manifest.lock */,
 				AB1CEC681ECDA1890090E3E5 /* Sources */,
 				AB1CEC691ECDA1890090E3E5 /* Frameworks */,
 				AB1CEC6A1ECDA1890090E3E5 /* Resources */,
+				4A55C177D4DF4CB4A1FDD93C /* [CP] Embed Pods Frameworks */,
+				0BD11976AC155EE9A18D6E85 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -180,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB1CEC661ECDA1890090E3E5 /* LaunchScreen.storyboard in Resources */,
+				ABB72E7D1EE5FFAF0047AD4B /* GoogleService-Info.plist in Resources */,
 				AB1CEC631ECDA1890090E3E5 /* Assets.xcassets in Resources */,
 				AB1CEC611ECDA1890090E3E5 /* Main.storyboard in Resources */,
 			);
@@ -189,18 +241,115 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABB72E7E1EE5FFAF0047AD4B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BD11976AC155EE9A18D6E85 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GetACookTests/Pods-GetACookTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0CBA60C005ECA064E4A29069 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		28A43842914E31A70745A362 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4A55C177D4DF4CB4A1FDD93C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GetACookTests/Pods-GetACookTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78B125AEA53A3911A07BE489 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GetACook/Pods-GetACook-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB535A8368DC3DF19DC86B16 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GetACook/Pods-GetACook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AB1CEC541ECDA1890090E3E5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB1CEC5E1ECDA1890090E3E5 /* ViewController.swift in Sources */,
+				AB1CEC5E1ECDA1890090E3E5 /* HomeController.swift in Sources */,
+				AB20AD061EE60C5500BA9F39 /* OrderController.swift in Sources */,
+				ABBB9CE41EE485A100CE1629 /* LoginController.swift in Sources */,
 				AB1CEC5C1ECDA1890090E3E5 /* AppDelegate.swift in Sources */,
+				ABBB9CE21EE4859800CE1629 /* RegisterController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +488,7 @@
 		};
 		AB1CEC761ECDA1890090E3E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7F7DEF53A93DB6436A76B19 /* Pods-GetACook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SS9XY927FG;
@@ -352,6 +502,7 @@
 		};
 		AB1CEC771ECDA1890090E3E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F601724B497A24D5F6E59034 /* Pods-GetACook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SS9XY927FG;
@@ -365,6 +516,7 @@
 		};
 		AB1CEC791ECDA1890090E3E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFE4445067604FF655D93A80 /* Pods-GetACookTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -379,6 +531,7 @@
 		};
 		AB1CEC7A1ECDA1890090E3E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 630D68760ECD6581D8485E9C /* Pods-GetACookTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -410,6 +563,7 @@
 				AB1CEC771ECDA1890090E3E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB1CEC781ECDA1890090E3E5 /* Build configuration list for PBXNativeTarget "GetACookTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +572,7 @@
 				AB1CEC7A1ECDA1890090E3E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
