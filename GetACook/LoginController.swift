@@ -8,24 +8,17 @@
 
 import UIKit
 import Firebase
-import FirebaseAuth
-import FirebaseDatabase
+import MBProgressHUD
 
 class LoginController: UIViewController {
 
     // MARK: Properties
-    let activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
     var ref: DatabaseReference!
-    
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Init loader
-        activityView.center = view.center
-        view.addSubview(activityView)
         
         // Init firebase
         ref = Database.database().reference()
@@ -44,7 +37,7 @@ class LoginController: UIViewController {
         }
         
         // Loading
-        activityView.startAnimating()
+        let progress = MBProgressHUD.showAdded(to: self.view, animated: true)
         sender.isEnabled = false
         
         // Login
@@ -56,7 +49,7 @@ class LoginController: UIViewController {
                 self.ref.child("users/\(user!.uid)").observeSingleEvent(of: .value, with: { (snapshot) in
                     guard let enabled = snapshot.childSnapshot(forPath: "enabled").value as? Bool, enabled == true else {
                         // FIREBASE: Incorrect user
-                        self.activityView.stopAnimating()
+                        progress.hide(animated: true)
                         sender.isEnabled = true
                         
                         // Delete it
@@ -77,7 +70,8 @@ class LoginController: UIViewController {
                     }
                     
                     // Login completed!
-                    self.activityView.stopAnimating()
+                    progress.hide(animated: true)
+                    sender.isEnabled = true
                     
                     // Print success
                     let alert = UIAlertController(title: "Connexion réussie", message: "Bon appétit \(name) !", preferredStyle: .alert)
@@ -96,6 +90,9 @@ class LoginController: UIViewController {
             
             } else {
                 // Wrong credentials
+                progress.hide(animated: true)
+                sender.isEnabled = true
+                
                 let alert = UIAlertController(title: "Erreur", message: error?.localizedDescription, preferredStyle: .alert)
                 
                 let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)

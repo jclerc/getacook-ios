@@ -8,22 +8,17 @@
 
 import UIKit
 import Firebase
-import FirebaseAuth
+import MBProgressHUD
 
 class HomeController: UIViewController {
 
-    let activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Init loader
-        activityView.center = view.center
-        view.addSubview(activityView)
-        activityView.startAnimating()
+        let progress = MBProgressHUD.showAdded(to: self.view, animated: true)
 
         Auth.auth().addStateDidChangeListener { auth, user in
-            self.activityView.stopAnimating()
+            progress.hide(animated: true)
             
             if user != nil {
                 // User is signed in.

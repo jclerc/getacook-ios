@@ -10,6 +10,7 @@ target 'GetACook' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'NextResponderTextField'
+  pod 'MBProgressHUD', '~> 1.0.0'
 
   target 'GetACookTests' do
     inherit! :search_paths

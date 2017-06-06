@@ -8,15 +8,12 @@
 
 import UIKit
 import Firebase
-import FirebaseAuth
-import FirebaseDatabase
+import MBProgressHUD
 
 class RegisterController: UIViewController {
     
     // MARK: Properties
-    let activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
     var ref: DatabaseReference!
-    
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -25,10 +22,6 @@ class RegisterController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Init loader
-        activityView.center = view.center
-        view.addSubview(activityView)
-
         // Add UIToolBar on keyboard w/ Done button
         addDoneButtonOnKeyboard()
         
@@ -59,7 +52,7 @@ class RegisterController: UIViewController {
         }
         
         // Loading
-        activityView.startAnimating()
+        let progress = MBProgressHUD.showAdded(to: self.view, animated: true)
         sender?.isEnabled = false
         
         // Register
@@ -78,7 +71,7 @@ class RegisterController: UIViewController {
                             user?.delete(completion: nil)
                             
                             // No longer loading
-                            self.activityView.stopAnimating()
+                            progress.hide(animated: true)
                             sender?.isEnabled = true
                             
                             // Alert user
@@ -90,7 +83,7 @@ class RegisterController: UIViewController {
                             self.present(alert, animated: true, completion: nil)
                         } else {
                             // No longer loading
-                            self.activityView.stopAnimating()
+                            progress.hide(animated: true)
                             sender?.isEnabled = true
                             
                             // Registration is now complete!
@@ -112,6 +105,9 @@ class RegisterController: UIViewController {
                 
             } else {
                 // Wrong credentials
+                progress.hide(animated: true)
+                sender?.isEnabled = true
+                
                 let alert = UIAlertController(title: "Erreur", message: error?.localizedDescription, preferredStyle: .alert)
                 
                 let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
