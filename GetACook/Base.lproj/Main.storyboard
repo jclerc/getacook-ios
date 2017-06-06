@@ -13,7 +13,7 @@
         <!--Home Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeController" customModule="GetACook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="BYZ-38-t0r" customClass="HomeController" customModule="GetACook" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -303,6 +303,14 @@ prix de vos courses.</string>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="WfV-vO-kag" kind="show" id="kwf-Xd-VTJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZt-ZP-YXS">
+                                <rect key="frame" x="142" y="617" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Déconnexion"/>
+                                <connections>
+                                    <action selector="logoutButton:" destination="oE9-nh-cRQ" eventType="touchUpInside" id="5Jl-EW-Cjj"/>
                                 </connections>
                             </button>
                         </subviews>

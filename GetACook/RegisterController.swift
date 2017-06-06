@@ -14,15 +14,20 @@ import FirebaseDatabase
 class RegisterController: UIViewController {
     
     // MARK: Properties
+    let activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+    var ref: DatabaseReference!
+    
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var phoneField: UITextField!
     
-    var ref: DatabaseReference!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Init loader
+        activityView.center = view.center
+        view.addSubview(activityView)
 
         // Add UIToolBar on keyboard w/ Done button
         addDoneButtonOnKeyboard()
@@ -53,20 +58,30 @@ class RegisterController: UIViewController {
             return
         }
         
+        // Loading
+        activityView.startAnimating()
+        sender?.isEnabled = false
+        
+        // Register
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             
             if error == nil {
-                print("FIREBASE: User registered..")
-                
+                // User registered via Firebase
+                // Now we fill its profile
                 self.ref.updateChildValues([
                     "users/\(user!.uid)/name": name,
                     "users/\(user!.uid)/phone": phone,
                     "users/\(user!.uid)/enabled": true,
                     ], withCompletionBlock: { (error, reference) in
                         if (error != nil) {
-                            print("FIREBASE: Registration cancelled")
+                            // Can't complete profile: cancel registration
                             user?.delete(completion: nil)
                             
+                            // No longer loading
+                            self.activityView.stopAnimating()
+                            sender?.isEnabled = true
+                            
+                            // Alert user
                             let alert = UIAlertController(title: "Erreur", message: "L'inscription a échouée..", preferredStyle: .alert)
                             
                             let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -74,12 +89,17 @@ class RegisterController: UIViewController {
                             
                             self.present(alert, animated: true, completion: nil)
                         } else {
-                            print("FIREBASE: Registration completed!")
+                            // No longer loading
+                            self.activityView.stopAnimating()
+                            sender?.isEnabled = true
+                            
+                            // Registration is now complete!
                             let alert = UIAlertController(title: "Inscription réussie", message: "Bon appétit \(name) !", preferredStyle: .alert)
                             
                             let action = UIAlertAction(title: "OK", style: .default, handler: {
                                 (result : UIAlertAction) -> Void in
                 
+                                // Then go to main navigation
                                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainNavigation")
                                 self.present(vc!, animated: true, completion: nil)
 
@@ -91,6 +111,7 @@ class RegisterController: UIViewController {
                 })
                 
             } else {
+                // Wrong credentials
                 let alert = UIAlertController(title: "Erreur", message: error?.localizedDescription, preferredStyle: .alert)
                 
                 let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -100,16 +121,6 @@ class RegisterController: UIViewController {
             }
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     // MARK: Hide keyboard on touch
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

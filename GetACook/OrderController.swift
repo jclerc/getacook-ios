@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class OrderController: UIViewController {
 
@@ -16,11 +17,15 @@ class OrderController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func logoutButton(_ sender: UIButton) {
+        do {
+            try Auth.auth().signOut()
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+            self.present(vc!, animated: true, completion: nil)
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
     }
-    
 
     /*
     // MARK: - Navigation

@@ -14,13 +14,18 @@ import FirebaseDatabase
 class LoginController: UIViewController {
 
     // MARK: Properties
+    let activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+    var ref: DatabaseReference!
+    
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
-    var ref: DatabaseReference!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Init loader
+        activityView.center = view.center
+        view.addSubview(activityView)
         
         // Init firebase
         ref = Database.database().reference()
@@ -38,15 +43,26 @@ class LoginController: UIViewController {
             return
         }
         
+        // Loading
+        activityView.startAnimating()
+        sender.isEnabled = false
+        
+        // Login
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             
             if error == nil {
-                print("FIREBASE: User logged..")
+                // User logged via Firebase
                 
                 self.ref.child("users/\(user!.uid)").observeSingleEvent(of: .value, with: { (snapshot) in
                     guard let enabled = snapshot.childSnapshot(forPath: "enabled").value as? Bool, enabled == true else {
-                        print("FIREBASE: Disabled user")
+                        // FIREBASE: Incorrect user
+                        self.activityView.stopAnimating()
+                        sender.isEnabled = true
+                        
+                        // Delete it
                         user?.delete(completion: nil)
+                        
+                        // And print alert
                         let alert = UIAlertController(title: "Erreur", message: "Vous devez déjà vous inscrire.", preferredStyle: .alert)
                         
                         let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -60,15 +76,18 @@ class LoginController: UIViewController {
                         fatalError("FIREBASE: Enabled account without name")
                     }
                     
-                    print("FIREBASE: Login completed!")
+                    // Login completed!
+                    self.activityView.stopAnimating()
+                    
+                    // Print success
                     let alert = UIAlertController(title: "Connexion réussie", message: "Bon appétit \(name) !", preferredStyle: .alert)
                     
                     let action = UIAlertAction(title: "OK", style: .default, handler: {
                         (result : UIAlertAction) -> Void in
                         
+                        // Then go to main navigation
                         let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainNavigation")
                         self.present(vc!, animated: true, completion: nil)
-                        
                     })
                     
                     alert.addAction(action)
@@ -76,6 +95,7 @@ class LoginController: UIViewController {
                 })
             
             } else {
+                // Wrong credentials
                 let alert = UIAlertController(title: "Erreur", message: error?.localizedDescription, preferredStyle: .alert)
                 
                 let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -86,16 +106,6 @@ class LoginController: UIViewController {
         }
 
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     // MARK: Hide keyboard on touch
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
