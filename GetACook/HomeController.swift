@@ -30,6 +30,4 @@ class HomeController: UIViewController {
     
     @IBAction func unwindToHome(sender: UIStoryboardSegue) {
     }
-
 }
-

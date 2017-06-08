@@ -11,6 +11,7 @@ target 'GetACook' do
   pod 'Firebase/Database'
   pod 'NextResponderTextField'
   pod 'MBProgressHUD', '~> 1.0.0'
+  pod 'DatePickerDialog', :inhibit_warnings => true
 
   target 'GetACookTests' do
     inherit! :search_paths

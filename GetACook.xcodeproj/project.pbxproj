@@ -15,10 +15,16 @@
 		AB1CEC661ECDA1890090E3E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB1CEC641ECDA1890090E3E5 /* LaunchScreen.storyboard */; };
 		AB1CEC711ECDA1890090E3E5 /* GetACookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1CEC701ECDA1890090E3E5 /* GetACookTests.swift */; };
 		AB20AD061EE60C5500BA9F39 /* OrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB20AD051EE60C5500BA9F39 /* OrderController.swift */; };
-		ABB72E7D1EE5FFAF0047AD4B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABB72E7C1EE5FFAF0047AD4B /* GoogleService-Info.plist */; };
-		ABB72E7E1EE5FFAF0047AD4B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABB72E7C1EE5FFAF0047AD4B /* GoogleService-Info.plist */; };
+		AB3C76451EE8A26100786C25 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C76441EE8A26100786C25 /* ListCell.swift */; };
+		AB69396A1EE754950053E234 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6939691EE754950053E234 /* ListController.swift */; };
+		AB69396B1EE754950053E234 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6939691EE754950053E234 /* ListController.swift */; };
+		AB6939701EE89D200053E234 /* BEBAS.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB69396F1EE89D200053E234 /* BEBAS.ttf */; };
+		AB6939721EE89D3A0053E234 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB6939711EE89D3A0053E234 /* GoogleService-Info.plist */; };
+		AB9184A51EE8D6AB0086C0A2 /* Chief.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9184A41EE8D6AB0086C0A2 /* Chief.swift */; };
 		ABBB9CE21EE4859800CE1629 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBB9CE11EE4859800CE1629 /* RegisterController.swift */; };
 		ABBB9CE41EE485A100CE1629 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBB9CE31EE485A100CE1629 /* LoginController.swift */; };
+		ABF641A51EE8EEAF0000B298 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF641A41EE8EEAF0000B298 /* ProfileController.swift */; };
+		ABF641A71EE8FBFB0000B298 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF641A61EE8FBFB0000B298 /* Order.swift */; };
 		C26ACAE8EB69C02EFBE25016 /* Pods_GetACookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB66AE0E4C66014F2F88DC7 /* Pods_GetACookTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,9 +53,15 @@
 		AB1CEC701ECDA1890090E3E5 /* GetACookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetACookTests.swift; sourceTree = "<group>"; };
 		AB1CEC721ECDA1890090E3E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB20AD051EE60C5500BA9F39 /* OrderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderController.swift; sourceTree = "<group>"; };
-		ABB72E7C1EE5FFAF0047AD4B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AB3C76441EE8A26100786C25 /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		AB6939691EE754950053E234 /* ListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		AB69396F1EE89D200053E234 /* BEBAS.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BEBAS.ttf; sourceTree = "<group>"; };
+		AB6939711EE89D3A0053E234 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AB9184A41EE8D6AB0086C0A2 /* Chief.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chief.swift; sourceTree = "<group>"; };
 		ABBB9CE11EE4859800CE1629 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		ABBB9CE31EE485A100CE1629 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		ABF641A41EE8EEAF0000B298 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		ABF641A61EE8FBFB0000B298 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		D9270181361DCEDA7D91549A /* Pods_GetACook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetACook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE4445067604FF655D93A80 /* Pods-GetACookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetACookTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GetACookTests/Pods-GetACookTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F601724B497A24D5F6E59034 /* Pods-GetACook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetACook.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetACook/Pods-GetACook.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,15 +122,21 @@
 			isa = PBXGroup;
 			children = (
 				AB1CEC5B1ECDA1890090E3E5 /* AppDelegate.swift */,
+				AB69396C1EE89CCB0053E234 /* Resources */,
 				AB1CEC5D1ECDA1890090E3E5 /* HomeController.swift */,
 				ABBB9CE11EE4859800CE1629 /* RegisterController.swift */,
 				ABBB9CE31EE485A100CE1629 /* LoginController.swift */,
 				AB1CEC5F1ECDA1890090E3E5 /* Main.storyboard */,
+				ABF641A41EE8EEAF0000B298 /* ProfileController.swift */,
+				AB3C76441EE8A26100786C25 /* ListCell.swift */,
+				AB6939691EE754950053E234 /* ListController.swift */,
+				AB9184A41EE8D6AB0086C0A2 /* Chief.swift */,
 				AB20AD051EE60C5500BA9F39 /* OrderController.swift */,
+				ABF641A61EE8FBFB0000B298 /* Order.swift */,
 				AB1CEC621ECDA1890090E3E5 /* Assets.xcassets */,
 				AB1CEC641ECDA1890090E3E5 /* LaunchScreen.storyboard */,
 				AB1CEC671ECDA1890090E3E5 /* Info.plist */,
-				ABB72E7C1EE5FFAF0047AD4B /* GoogleService-Info.plist */,
+				AB6939711EE89D3A0053E234 /* GoogleService-Info.plist */,
 			);
 			path = GetACook;
 			sourceTree = "<group>";
@@ -130,6 +148,14 @@
 				AB1CEC721ECDA1890090E3E5 /* Info.plist */,
 			);
 			path = GetACookTests;
+			sourceTree = "<group>";
+		};
+		AB69396C1EE89CCB0053E234 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AB69396F1EE89D200053E234 /* BEBAS.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		AF6E2903B38016B3F003D4A7 /* Frameworks */ = {
@@ -231,9 +257,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB1CEC661ECDA1890090E3E5 /* LaunchScreen.storyboard in Resources */,
-				ABB72E7D1EE5FFAF0047AD4B /* GoogleService-Info.plist in Resources */,
+				AB6939701EE89D200053E234 /* BEBAS.ttf in Resources */,
 				AB1CEC631ECDA1890090E3E5 /* Assets.xcassets in Resources */,
 				AB1CEC611ECDA1890090E3E5 /* Main.storyboard in Resources */,
+				AB6939721EE89D3A0053E234 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +268,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABB72E7E1EE5FFAF0047AD4B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,9 +373,14 @@
 			files = (
 				AB1CEC5E1ECDA1890090E3E5 /* HomeController.swift in Sources */,
 				AB20AD061EE60C5500BA9F39 /* OrderController.swift in Sources */,
+				ABF641A71EE8FBFB0000B298 /* Order.swift in Sources */,
 				ABBB9CE41EE485A100CE1629 /* LoginController.swift in Sources */,
+				AB3C76451EE8A26100786C25 /* ListCell.swift in Sources */,
+				ABF641A51EE8EEAF0000B298 /* ProfileController.swift in Sources */,
 				AB1CEC5C1ECDA1890090E3E5 /* AppDelegate.swift in Sources */,
+				AB9184A51EE8D6AB0086C0A2 /* Chief.swift in Sources */,
 				ABBB9CE21EE4859800CE1629 /* RegisterController.swift in Sources */,
+				AB69396A1EE754950053E234 /* ListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB1CEC711ECDA1890090E3E5 /* GetACookTests.swift in Sources */,
+				AB69396B1EE754950053E234 /* ListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

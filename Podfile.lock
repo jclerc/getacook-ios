@@ -1,4 +1,5 @@
 PODS:
+  - DatePickerDialog (1.1.7)
   - Firebase/Auth (4.0.0):
     - Firebase/Core
     - FirebaseAuth (= 4.0.0)
@@ -37,6 +38,7 @@ PODS:
   - NextResponderTextField (2.0.1)
 
 DEPENDENCIES:
+  - DatePickerDialog
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -44,6 +46,7 @@ DEPENDENCIES:
   - NextResponderTextField
 
 SPEC CHECKSUMS:
+  DatePickerDialog: bd5e7e92e4da2c6a8966b28d5f5d8f335d6c2c63
   Firebase: 284eea779b73fdff309791817da7c68bff8dd572
   FirebaseAnalytics: 6f08e746f7d66f5452931bc2e822b5df9c66b64a
   FirebaseAuth: ebb6abcbabae00fc47446d690c19ce68d8484fde
@@ -55,6 +58,6 @@ SPEC CHECKSUMS:
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   NextResponderTextField: 93221cea88a1f2838558db88adc46d2a0763f0dd
 
-PODFILE CHECKSUM: 4b3d01f7cc58b0631ba36714b12a6a872a7ce430
+PODFILE CHECKSUM: 65c53e1854ce6b43dc800d11225e2e7b385db36e
 
 COCOAPODS: 1.2.1
