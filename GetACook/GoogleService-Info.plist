@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>515615921308-r0lv259daeap45rvaci3nvtfefc8trvb.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.515615921308-r0lv259daeap45rvaci3nvtfefc8trvb</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAF8goXIZityFz4umIzg7IISn7hoLFNbW0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>515615921308</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.jclerc.GetACook</string>
+	<key>PROJECT_ID</key>
+	<string>getacook-7c8ef</string>
+	<key>STORAGE_BUCKET</key>
+	<string>getacook-7c8ef.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:515615921308:ios:d8c0d6160b0b88ab</string>
+	<key>DATABASE_URL</key>
+	<string>https://getacook-7c8ef.firebaseio.com</string>
+</dict>
+</plist>
